@@ -1,0 +1,33 @@
+extends layout 
+block content
+
+
+    .myForm
+    // the forms to apply
+    form(action="/finishSignUp" method="post")
+        label.fname(for="fname") First name:
+        br
+        br
+        input(type="text" name="fname", required)
+        br
+        br
+        label.lname(for="lname") Last name:
+        br
+        br
+        input(type="text" name="lname", required)
+        br
+        br
+        label.email(for="email") email adress:
+        br
+        br
+        input(type="email" name="emailSub", required)
+        br
+        br
+        label.password(for="password") password:
+        br
+        br
+        input(type='text' name='password', required)
+        br
+        br
+        img#imgForm(src='' alt='')
+        input(type="submit" value="INSERT")

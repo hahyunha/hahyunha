@@ -1,0 +1,54 @@
+extends layout 
+block content 
+
+    .myForm1
+    form(action='/uploaded' method='post')
+        label.degree(for='fname') Degree:
+        br
+        br
+        input(type='text' name='degree')
+        br
+        br
+        label.lname(for='lname') Course:
+        br
+        br
+        input(type='text' name='course')
+        br
+        br
+        label.email(for='email') Email:
+        br
+        br
+        input(type='email' name='email')
+        br
+        br
+        label.password(for='password') Password:
+        br
+        br
+        input(type='text' name='password')
+        br
+        br
+        img#imgForm(src='' alt='')
+        input( type='submit' value='Submit')
+    .container
+
+    
+        // Photos
+        .row
+        .col-md-4
+            input#addPhotosInput.d-none(type='file' accept='image/png, image/gif, image/jpeg')
+            button#addPhotosBtn.btn.btn-secondary
+            | Add Photos 
+            i.fa.fa-camera
+        .col-md-12
+            .photos-list
+            ul
+        // Video
+        .row
+        .col-md-4
+            input#addVideosInput.d-none(type='file' accept=' video/*')
+            button#addVideosBtn.btn.btn-secondary
+            | Add Videos 
+            i.fa.fa-camera
+        .col-md-12
+            .video-list
+            ul

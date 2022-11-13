@@ -1,0 +1,20 @@
+extends layout 
+block content
+
+
+    .myForm
+    form(action='/signInAfter' method='get')
+        label.email(for='email') email adress:
+        br
+        br
+        input(type='email' name='emailE', required)
+        br
+        br
+        label.password(for='password') password:
+        br
+        br
+        input(type='text' name='passwordE', required)
+        br
+        br
+        img#imgForm(src='' alt='')
+        input( type="submit" value="INSERT")
